@@ -1,0 +1,60 @@
+@media screen {
+  :root {
+    --canvas: #0b1411;
+    --panel: #15221b;
+    --edge: #2c3d34;
+    --ink: #f0f5f1;
+    --muted: #b4c1ba;
+    --gold: #ebbc18;
+  }
+  body { background: var(--canvas); color: var(--ink); font: 16px/1.5 "Segoe UI", Arial, sans-serif; }
+  .bar { background: #0f3828; border-bottom: 3px solid var(--gold); }
+  header { max-width: none; height: 92px; padding: 0 24px; gap: 16px; }
+  .brand, .portal { color: var(--ink); text-decoration: none; }
+  .brand { display: flex; align-items: center; gap: 17px; }
+  .brand img { width: 122px; max-height: none; }
+  .brand span { padding-left: 17px; border-left: 1px solid #628172; }
+  .brand strong, .brand small { display: block; }
+  .brand small { color: #d5e5da; font-weight: 400; }
+  .portal { border: 1px solid #557767; border-radius: 24px; padding: 5px 16px; font-size: 14px; font-weight: 650; }
+  .portal:hover { background: #204936; }
+  .wrap { width: min(816px, calc(100% - 40px)); max-width: none; padding: 0; }
+  .hero { padding: 48px 0 0; color: var(--ink); background: transparent; }
+  .hero h1 { margin: 0 0 5px; font: 800 clamp(26px,4vw,32px)/1.2 "Segoe UI",Arial,sans-serif; text-transform: uppercase; letter-spacing: .035em; }
+  .hero p, .description, .steps, .note { color: var(--muted); }
+  .wrap main { padding: 30px 0 52px; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); }
+  main:has(#home:not([hidden])) .steps { display: none; }
+  .steps { border-color: var(--edge); gap: 12px; align-items: center; font-size: 14px; }
+  .steps b { color: #c5ebd6; }
+  .cards { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+  .card { gap: 10px; padding: 25px; border: 1px solid var(--edge); border-radius: 12px; background: var(--panel); color: var(--ink); font: inherit; }
+  .card:hover, .card:focus-visible { background: #1b2e23; border-color: #628773; }
+  .card-heading { display: flex; gap: 11px; align-items: center; }
+  .card-heading strong { font-size: 18px; line-height: 1.35; }
+  .tile-icon { width: 38px; height: 38px; flex: none; display: grid; place-items: center; border-radius: 9px; background: #eaf5ec; color: #25805b; }
+  .description { font-size: 15px; line-height: 1.52; }
+  #edit > h2, #review > h2 { font: 700 24px/1.25 "Segoe UI",Arial,sans-serif; }
+  fieldset { background: var(--panel); border-color: var(--edge); min-width: 0; }
+  legend { color: #def0e4; }
+  label { font-size: 14px; }
+  input, select, textarea { color-scheme: dark; background: var(--canvas); color: var(--ink); border-color: #52685a; font-size: 16px; }
+  .btn { background: #bdebcf; color: #123825; }
+  .minor { background: var(--panel); color: var(--ink); border-color: #52685a; }
+  .btn:hover { filter: brightness(1.12); }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .msg { color: #ffb9ab; }
+  @media(max-width: 640px) {
+    header { height: 74px; padding: 0 13px; gap: 8px; }
+    .brand { gap: 9px; }
+    .brand img { width: 67px; }
+    .brand span { padding-left: 9px; }
+    .brand small { font-size: 12px; }
+    .portal { padding: 5px 9px; font-size: 13px; }
+    .wrap { width: calc(100% - 32px); }
+    .hero { padding-top: 30px; }
+    .cards { grid-template-columns: 1fr; }
+    .card { padding: 20px; }
+    .steps { gap: 6px; font-size: 13px; }
+  }
+}
